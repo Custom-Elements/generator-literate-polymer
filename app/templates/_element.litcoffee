@@ -4,7 +4,7 @@
 ##Events
 *TODO* describe the custom event `name` and `detail` that are fired.
 
-    Polymer '#<%= _.slugify(elementName) %>',
+    Polymer '<%= _.slugify(elementName) %>',
 
 ##Attributes and Change Handlers
 
@@ -16,7 +16,7 @@
 
       created: ->
 
-      readt: ->
+      ready: ->
 
       attached: ->
 

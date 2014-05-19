@@ -3,8 +3,7 @@
   "main": "<%= _.slugify(elementName) %>.html",
   "version": "0.0.0",
   "dependencies": {
-    "platform": "Polymer/platform#master",
-    "polymer": "Polymer/polymer#master"
+    "polymer": ">0.2.0"
   },
   "ignore": [
     "**/.*",
