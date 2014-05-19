@@ -11,9 +11,11 @@
     "gulp-shell": "",
     "gulp-less": "",
     "gulp-rename": "",
-    "vulcanize": ""
+    "vulcanize": "",
+    "express": ""
   },
   "scripts": {
-    "prepublish": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build"
+    "prepublish": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build",
+    "test": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee watch"
   }
 }

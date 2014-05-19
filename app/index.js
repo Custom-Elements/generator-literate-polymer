@@ -27,6 +27,7 @@ var LiteratePolymerGenerator = yeoman.generators.Base.extend({
     var prompts = [{
       name: 'elementName',
       message: 'What are you calling your element?',
+      default: path.basename(path.resolve('.')),
       validate: function(input){
           var valid = input && input.length && input.indexOf('-');
           if (valid)
@@ -50,6 +51,7 @@ var LiteratePolymerGenerator = yeoman.generators.Base.extend({
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
     this.copy('_gulpfile.litcoffee', 'gulpfile.litcoffee');
+    this.copy('_demo.html', 'demo.html');
     this.copy('_element.html', './src/' + name + '.html');
     this.copy('_element.litcoffee','./src/' + name + '.litcoffee');
     this.copy('_element.less','./src/' + name + '.less');

@@ -10,6 +10,7 @@ entire project at the end.
     browserify = require 'gulp-browserify'
     rename = require 'gulp-rename'
     shell = require 'gulp-shell'
+    express = require 'express'
 
 And our custom elements.
 
@@ -46,4 +47,14 @@ Vulcanize for the speed.
           "vulcanize --inline --strip -o <%= _.slugify(elementName) %>.html #{built}"
           ])
 
-    gulp.task 'build', ['vulcanize'], ->
+    gulp.task 'build', ['vulcanize']
+
+    gulp.task 'watch', ['elements'], ->
+      app = express()
+      app.use(express.static(__dirname))
+      app.listen(10000)
+      console.log 'http://localhost:10000/demo.html'
+
+      watcher = gulp.watch 'src/**/*.*', ['elements']
+      watcher.on 'change', ->
+        console.log 'rebuildling...'
