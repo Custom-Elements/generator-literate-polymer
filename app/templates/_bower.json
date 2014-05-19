@@ -1,0 +1,16 @@
+{
+  "name": "<%= _.slugify(elementName) %>",
+  "main": "<%= _.slugify(elementName) %>.html",
+  "version": "0.0.0",
+  "dependencies": {
+    "platform": "Polymer/platform#master",
+    "polymer": "Polymer/polymer#master"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

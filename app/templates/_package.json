@@ -1,0 +1,19 @@
+{
+  "name": "<%= _.slugify(elementName) %>",
+  "version": "0.0.0",
+  "dependencies": {
+    "coffeeify": "",
+    "coffee-script": "",
+    "browserify": "",
+    "browserify-data": "",
+    "gulp": "",
+    "gulp-browserify": "",
+    "gulp-shell": "",
+    "gulp-less": "",
+    "gulp-rename": "",
+    "vulcanize": ""
+  },
+  "scripts": {
+    "prepublish": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build"
+  }
+}
