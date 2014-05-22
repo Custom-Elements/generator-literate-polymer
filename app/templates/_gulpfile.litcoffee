@@ -49,7 +49,7 @@ Vulcanize for the speed.
 
     gulp.task 'build', ['vulcanize']
 
-    gulp.task 'watch', ['elements'], ->
+    gulp.task 'watch', ['vulcanize'], ->
       app = express()
       app.use(express.static(__dirname))
       app.listen(10000)
