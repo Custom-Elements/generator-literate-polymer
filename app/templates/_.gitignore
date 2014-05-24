@@ -1,4 +1,4 @@
 bower_components
 node_modules
 build
-<%= _.slugify(elementName) %>.html
+/<%= _.slugify(elementName) %>.html
