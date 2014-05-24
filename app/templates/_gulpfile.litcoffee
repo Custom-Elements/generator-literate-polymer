@@ -56,7 +56,7 @@ Vulcanize for the speed.
       built = 'build/<%= _.slugify(elementName) %>.html'
       gulp.src ''
         .pipe shell([
-          "vulcanize --inline --strip -o <%= _.slugify(elementName) %>.html build/*.html"
+          "vulcanize --inline --strip -o <%= _.slugify(elementName) %>.html #{__dirname}/build/*.html"
           ])
 
     gulp.task 'build', ['vulcanize', 'readme']
