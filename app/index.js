@@ -58,7 +58,7 @@ var LiteratePolymerGenerator = yeoman.generators.Base.extend({
   },
 
   projectfiles: function () {
-    this.copy('gitignore', '.gitignore');
+    this.copy('_.gitignore', '.gitignore');
   }
 });
 
