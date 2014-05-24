@@ -10,33 +10,45 @@ entire project at the end.
     browserify = require 'gulp-browserify'
     rename = require 'gulp-rename'
     shell = require 'gulp-shell'
+    replace = require 'gulp-replace'
+    concat = require 'gulp-concat'
     express = require 'express'
+    util = require 'util'
+    handle = (stream)->
+      stream.on 'error', ->
+        util.log.apply this, arguments
+        stream.end()
+    src ='./src'
+    dest = 'build/'
 
 And our custom elements.
 
     gulp.task 'elements', ['elements-code', 'elements-style', 'elements-static']
     gulp.task  'elements-code', ->
-      src ='./src'
-      dest = 'build/'
       gulp.src '*.litcoffee', {cwd: src, read: false}
-        .pipe browserify
+        .pipe handle browserify
           transform: ['coffeeify', 'browserify-data']
           debug: false
         .pipe rename extname: '.js'
         .pipe gulp.dest dest
     gulp.task  'elements-style', ->
-      src ='./src'
-      dest = 'build/'
       gulp.src '*.less', {cwd: src}
-        .pipe less()
+        .pipe handle less()
         .pipe gulp.dest dest
     gulp.task  'elements-static', ->
-      src ='./src'
-      dest = 'build/'
       gulp.src '*.html', {cwd: src}
         .pipe gulp.dest dest
       gulp.src '*.svg', {cwd: src}
         .pipe gulp.dest dest
+
+Make up a readme based on literate programming of the element.
+
+    gulp.task 'readme', ->
+      gulp.src '*.litcoffee', {cwd: src}
+        .pipe replace /^\s\s\s\s.*$/gm, ''
+        .pipe concat 'README.md'
+        .pipe gulp.dest '.'
+
 
 Vulcanize for the speed.
 
@@ -44,17 +56,17 @@ Vulcanize for the speed.
       built = 'build/<%= _.slugify(elementName) %>.html'
       gulp.src ''
         .pipe shell([
-          "vulcanize --inline --strip -o <%= _.slugify(elementName) %>.html #{built}"
+          "vulcanize --inline --strip -o <%= _.slugify(elementName) %>.html build/*.html"
           ])
 
-    gulp.task 'build', ['vulcanize']
+    gulp.task 'build', ['vulcanize', 'readme']
 
-    gulp.task 'watch', ['vulcanize'], ->
+    gulp.task 'watch', ->
       app = express()
       app.use(express.static(__dirname))
       app.listen(10000)
       console.log 'http://localhost:10000/demo.html'
 
-      watcher = gulp.watch 'src/**/*.*', ['elements']
+      watcher = gulp.watch 'src/**/*.*', ['elements', 'readme']
       watcher.on 'change', ->
         console.log 'rebuildling...'

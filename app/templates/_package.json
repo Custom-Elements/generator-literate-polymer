@@ -10,12 +10,15 @@
     "gulp-browserify": "",
     "gulp-shell": "",
     "gulp-less": "",
+    "gulp-replace": "",
     "gulp-rename": "",
+    "gulp-concat": "",
     "vulcanize": "",
     "express": ""
   },
+  "license": "MIT",
   "scripts": {
-    "prepublish": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build",
+    "postinstall": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build",
     "test": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee watch"
   }
 }
