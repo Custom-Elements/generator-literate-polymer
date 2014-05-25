@@ -16,6 +16,13 @@ a `.html`, `.less`,  and a `.litcoffee` file. This is all built
 together with [Gulp](http://gulpjs.com) and
 [Browserify](http://browserify.org).
 
+## Developing
+
+Run `npm test` and it a watcher and test web server will fire up, with
+a `demo.html` page for you to exercise and debug your new element. Lots
+easier to work on these elements stand alone, since the cycle time for
+build and reload is a lot faster!
+
 ## Using
 
 You can `npm install` any element generated with this system, and
