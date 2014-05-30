@@ -6,7 +6,7 @@ with my current build and language preferences.
 
 ```
 npm install -g yo
-npm install -g generator-literate-polymer
+npm install -g wballard/generator-literate-polymer
 mkdir your-element-name
 yo literate-polymer
 ```
