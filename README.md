@@ -5,7 +5,8 @@ This is a [Yeoman](http://yeoman.io) generator for Polymer elements
 with my current build and language preferences.
 
 ```
-npm install -g yo generator-literate-polymer
+npm install -g yo
+npm install -g generator-literate-polymer
 mkdir your-element-name
 yo literate-polymer
 ```
