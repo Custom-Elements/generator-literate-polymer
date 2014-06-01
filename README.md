@@ -2,11 +2,10 @@
 ## Getting Started
 
 This is a [Yeoman](http://yeoman.io) generator for Polymer elements
-with my current build and language preferences.
 
 ```
 npm install -g yo
-npm install -g wballard/generator-literate-polymer
+npm install -g custom-elements/generator-literate-polymer
 mkdir your-element-name
 yo literate-polymer
 ```
@@ -14,8 +13,9 @@ yo literate-polymer
 This will make a single element project, designed to be placed stand
 alone in a git repository. You make an element `name`, which generates
 a `.html`, `.less`,  and a `.litcoffee` file. This is all built
-together with [Gulp](http://gulpjs.com) and
-[Browserify](http://browserify.org).
+together with [Gulp](http://gulpjs.com),
+[Browserify](http://browserify.org), [less](http://lesscss.org/),
+[CoffeeScript](http://coffeescript.org/).
 
 ## Developing
 

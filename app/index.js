@@ -46,9 +46,7 @@ var LiteratePolymerGenerator = yeoman.generators.Base.extend({
   app: function () {
     var name = _.slugify(this.elementName);
     this.mkdir('src');
-
     this.copy('_package.json', 'package.json');
-    this.copy('_bower.json', 'bower.json');
     this.copy('_demo.html', 'demo.html');
     this.copy('_element.html', './src/' + name + '.html');
     this.copy('_element.litcoffee','./src/' + name + '.litcoffee');
