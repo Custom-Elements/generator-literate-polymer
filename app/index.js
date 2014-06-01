@@ -54,6 +54,7 @@ var LiteratePolymerGenerator = yeoman.generators.Base.extend({
   },
 
   projectfiles: function () {
+    this.copy('_gulpfile.js', 'gulpfile.js');
     this.copy('_gulpfile.litcoffee', 'gulpfile.litcoffee');
     this.copy('_.gitignore', '.gitignore');
   }

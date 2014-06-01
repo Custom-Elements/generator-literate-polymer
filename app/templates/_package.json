@@ -14,11 +14,12 @@
     "gulp-rename": "",
     "gulp-concat": "",
     "vulcanize": "",
-    "express": ""
+    "express": "",
+    "polymer": "git://github.com/Custom-Elements/polymer"
   },
   "license": "MIT",
   "scripts": {
-    "postinstall": "bower install && gulp --require coffee-script/register --gulpfile gulpfile.litcoffee build",
-    "test": "gulp --require coffee-script/register --gulpfile gulpfile.litcoffee watch"
+    "postinstall": "gulp build",
+    "test": "gulp watch"
   }
 }
