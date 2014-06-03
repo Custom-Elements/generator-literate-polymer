@@ -54,10 +54,9 @@ Make up a readme based on literate programming of the element.
 Vulcanize for the speed.
 
     gulp.task 'vulcanize', ['elements'], ->
-      built = 'build/<%= _.slugify(elementName) %>.html'
-      gulp.src ''
+      gulp.src '*.html', {cwd: dest}
         .pipe shell([
-          "vulcanize --inline --strip -o <%= _.slugify(elementName) %>.html #{__dirname}/build/*.html"
+          "vulcanize --inline --strip -o <%= file.path %> <%= file.path %>"
           ])
 
     gulp.task 'build', ['vulcanize', 'readme']
