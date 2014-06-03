@@ -15,7 +15,8 @@
     "gulp-concat": "",
     "vulcanize": "",
     "express": "",
-    "polymer": "git://github.com/Custom-Elements/polymer"
+    "polymer": "git://github.com/Custom-Elements/polymer",
+    "express-livereload": "0.0.24"
   },
   "license": "MIT",
   "scripts": {
