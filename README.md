@@ -6,7 +6,7 @@ This is a [Yeoman](http://yeoman.io) generator for Polymer elements
 ```
 npm install -g yo
 npm install -g custom-elements/generator-literate-polymer
-mkdir your-element-name
+mkdir your-element-name; cd your-element-name
 yo literate-polymer
 ```
 
@@ -19,14 +19,14 @@ together with [Gulp](http://gulpjs.com),
 
 ## Developing
 
-Run `npm test` and it a watcher and test web server will fire up, with
-a `demo.html` page for you to exercise and debug your new element. Lots
+Run `npm test` and a watcher and test web server will fire up, with
+a `demo.html` page for you to execute and debug your new element. Lots
 easier to work on these elements stand alone, since the cycle time for
 build and reload is a lot faster!
 
 ## Using
 
 You can `npm install` any element generated with this system, and
-will will run its build creating `name.html`, the fully vulcanized
+it will run its build creating `name.html`, the fully vulcanized
 and optimized element.  You are also welcome to include elements by
 `src/name.html`, and then vulcanize your final application.
