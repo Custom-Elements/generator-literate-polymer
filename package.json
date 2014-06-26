@@ -1,6 +1,6 @@
 {
   "name": "generator-literate-polymer",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Yeoman generator to make Polymer elements from Literate CoffeeScript and Less.",
   "license": "MIT",
   "main": "app/index.js",
