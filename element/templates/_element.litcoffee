@@ -1,8 +1,8 @@
-#<%= _.slugify(elementName) %>
+#<%= _.slugify(name) %>
 *TODO* tell me all about your element.
 
 
-    Polymer '<%= _.slugify(elementName) %>',
+    Polymer '<%= _.slugify(name) %>',
 
 ##Events
 *TODO* describe the custom event `name` and `detail` that are fired.
