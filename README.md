@@ -24,6 +24,16 @@ a `demo.html` page for you to execute and debug your new element. Lots
 easier to work on these elements stand alone, since the cycle time for
 build and reload is a lot faster!
 
+You can also create new elements on the fly running this command.
+
+```
+yo literate-polymer:element my-new-element
+```
+
+Like the project generator, this will take `my-element-name` and generate
+the `.html`, `.less`,  and `.litcoffee` files in your src directory.
+
+
 ## Using
 
 You can `npm install` any element generated with this system, and
