@@ -13,10 +13,8 @@
     </style>
   </head>
   <body unresolved>
-    <div id="holder">
-      <<%= _.slugify(elementName) %>>
-      </<%= _.slugify(elementName) %>>
-    </div>
+    <<%= _.slugify(elementName) %>>
+    </<%= _.slugify(elementName) %>>
     <script>
       document.addEventListener('polymer-ready', function() {
         //poke your element here
