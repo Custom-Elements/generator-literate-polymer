@@ -2,9 +2,9 @@
   "name": "<%= _.slugify(elementName) %>",
   "version": "0.0.0",
   "dependencies": {
-    "polymer": "git://github.com/custom-elements/polymer#master",
+    "polymer": "git+https://github.com/custom-elements/polymer#master",
     "polymer-serve": "^0.0.30",
-    "ui-styles": "git://github.com/custom-elements/ui-styles#master",
+    "ui-styles": "git+https://github.com/custom-elements/ui-styles#master",
     "ui-fonts": "^0.0.1"
   },
   "license": "ISC",
